@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.NewEmployeeController">
+   <children>
+      <Separator layoutX="6.0" layoutY="104.0" prefHeight="15.0" prefWidth="1012.0" style="-fx-background-color: skyblue;" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="83.0" prefWidth="102.0" text="Back">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Label layoutX="302.0" layoutY="21.0" text="Create New Employee">
+         <font>
+            <Font name="Garuda Bold" size="37.0" />
+         </font>
+      </Label>
+      <Separator layoutX="509.0" layoutY="111.0" orientation="VERTICAL" prefHeight="596.0" prefWidth="0.0" />
+      <Separator layoutX="7.0" layoutY="706.0" prefHeight="0.0" prefWidth="1006.0" />
+      <Label layoutX="127.0" layoutY="142.0" text="Basic Information">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="46.0" layoutY="187.0" prefHeight="444.0" prefWidth="382.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="103.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="232.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="57.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Employee ID" />
+            <Label text="First Name" GridPane.rowIndex="1" />
+            <Label text="Last Name" GridPane.rowIndex="2" />
+            <Label text="Birthdate" GridPane.rowIndex="4" />
+            <Label text="Job Title" GridPane.rowIndex="3" />
+            <Label text="Password" GridPane.rowIndex="5" />
+            <TextField fx:id="employeeIdTF" disable="true" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="firstNameTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="lastNameTF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="jobTitleCB" prefHeight="26.0" prefWidth="286.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="showPasswordButton" mnemonicParsing="false" text="Show" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <DatePicker fx:id="birthdateDP" prefHeight="25.0" prefWidth="227.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <Label layoutX="550.0" layoutY="142.0" text="Services">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ListView fx:id="offeredLV" layoutX="550.0" layoutY="293.0" prefHeight="399.0" prefWidth="200.0" />
+      <ListView fx:id="notOfferedLV" layoutX="810.0" layoutY="293.0" prefHeight="399.0" prefWidth="200.0" />
+      <ComboBox fx:id="serviceTypeCB" layoutX="835.0" layoutY="144.0" prefWidth="150.0" />
+      <ComboBox fx:id="serviceSubTypeCB" layoutX="835.0" layoutY="187.0" prefWidth="150.0" />
+      <Label layoutX="760.0" layoutY="145.0" text="Type:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="726.0" layoutY="188.0" text="Subtype:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="626.0" layoutY="265.0" text="Offered" />
+      <Label layoutX="872.0" layoutY="265.0" text="Not Offered" />
+      <Button fx:id="addAllButton" layoutX="750.0" layoutY="345.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="61.0" text="&lt;&lt;&lt;" onAction="#addAllOfferedService"/>
+      <Button fx:id="addButton" layoutX="750.0" layoutY="396.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="61.0" text="&lt;--" onAction="#addOfferedService"/>
+      <Button fx:id="removeButton" layoutX="750.0" layoutY="449.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="61.0" text="--&gt;" />
+      <Button fx:id="removeAllButton" layoutX="750.0" layoutY="503.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="61.0" text="&gt;&gt;&gt;" />
+      <Button fx:id="saveButton" layoutX="936.0" layoutY="714.0" mnemonicParsing="false" onAction="#saveButtonPressed" prefHeight="40.0" prefWidth="71.0" text="Save" />
+      <Button fx:id="cancelButton" layoutX="837.0" layoutY="714.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="40.0" prefWidth="71.0" text="Cancel" />
+      <Button fx:id="filterButton" layoutX="908.0" layoutY="225.0" mnemonicParsing="false" text="Apply Filter" onAction="#filterButtonPressed"/>
+   </children>
+</AnchorPane>
