@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.AppointmentsController">
+   <children>
+      <Separator layoutX="6.0" layoutY="105.0" prefHeight="15.0" prefWidth="1012.0" style="-fx-background-color: skyblue;" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="83.0" prefWidth="102.0" text="Back">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Label layoutX="399.0" layoutY="21.0" text="Appointments">
+         <font>
+            <Font name="Garuda Bold" size="37.0" />
+         </font>
+      </Label>
+      <ListView fx:id="appointmenteLV" layoutX="509.0" layoutY="139.0" prefHeight="566.0" prefWidth="488.0" />
+      <TextField fx:id="empIDTF" layoutX="164.0" layoutY="184.0" />
+      <DatePicker fx:id="startDP" layoutX="137.0" layoutY="331.0" />
+      <DatePicker fx:id="endDP" layoutX="137.0" layoutY="409.0" />
+      <Label layoutX="57.0" layoutY="189.0" text="Stylist ID:" />
+      <Label layoutX="170.0" layoutY="248.0" text="Timeframe">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="207.0" layoutY="308.0" text="Between" />
+      <Label layoutX="230.0" layoutY="376.0" text="&amp;" />
+      <Button fx:id="searchButton" layoutX="270.0" layoutY="492.0" mnemonicParsing="false" text="Search" onAction="#searchButtonPressed"/>
+      <Button fx:id="deleteSelected" layoutX="875.0" layoutY="719.0" mnemonicParsing="false" text="Delete Selected" onAction="#deleteButtonPressed"/>
+   </children>
+</AnchorPane>
