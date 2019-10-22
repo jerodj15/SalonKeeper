@@ -55,4 +55,7 @@ This Java application was a windows desktop-based application that was designed 
   <strong>Note: </strong> Even though the user may be successfully logged in, unless the initial database has been created and set up, the rest of the application will not function properly.
   </p>
 </div>
-<img href="salonkeeperER.png"></img>
+<div>
+  <h3>Entity Relationship Diagram</h3>
+<img src="salonkeeperER.png"></img>
+</div>
